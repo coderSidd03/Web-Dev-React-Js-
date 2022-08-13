@@ -1,6 +1,7 @@
 
 import React from 'react';
 import Avatar from './Avatar'
+import Heading from './Heading'
 import Detail from './Detail'
 
 function Card(props) {
@@ -8,12 +9,14 @@ function Card(props) {
         <div className="card">
 
             <div className="top">
-                <h2 className='name'>{props.name}</h2>
-                <Avatar image={props.img}/>
+                <p> {props.value} </p>
+                {/* accessing the value which mentioned for key but with new attribute value */}
+                <Heading name= {props.name} />
+                <Avatar image={props.image}/>
             </div>
 
             <div className="bottom">
-                <Detail detailInfo={props.cell} />
+                <Detail detailInfo={props.tel} />
                 <Detail detailInfo={props.mail} />
             </div>
             
